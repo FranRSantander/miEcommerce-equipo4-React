@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap"); 
+
+
+.productCard{
+    font-family:'Open Sans';
+    color: black;
+    font-size: 12px;
+    display:block;
+    flex-direction: row;
+    border: solid 1px blue;
+}
