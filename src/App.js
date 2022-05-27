@@ -1,15 +1,15 @@
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 
-import SideBar from './components/SideBar';
-import MainArea from './components/MainArea';
+import SideBar from './components/SideBar/SideBar';
+import MainArea from './components/MainArea/MainArea';
 import Router from './routes/Router';
 
 
 function App() {
   return(
     <BrowserRouter>
-        <div className='body-content'>
+        <div className='bodyContent'>
             <SideBar/>
 
 

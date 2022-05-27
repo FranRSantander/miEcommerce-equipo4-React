@@ -1,4 +1,4 @@
-.sidebar{
+.sideBar{
     width: 296px;
     height: 100vh;
     position: absolute;
@@ -6,7 +6,7 @@
     background-color: red;
 }
 @media (min-width: 1024px){
-    .sidebar{
+    .sideBar{
         position: relative;
         left: 0px;
     }

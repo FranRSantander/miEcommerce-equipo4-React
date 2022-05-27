@@ -1,6 +1,6 @@
 import './MainArea.css';
 
-const MainArea = ({ children }) => {
+function MainArea({ children }) {
   return (
     <div className='mainAreaContent'>{children}</div>
   )
