@@ -1,0 +1,13 @@
+.sidebar{
+    width: 296px;
+    height: 100vh;
+    position: absolute;
+    left: -296px;
+    background-color: red;
+}
+@media (min-width: 1024px){
+    .sidebar{
+        position: relative;
+        left: 0px;
+    }
+}

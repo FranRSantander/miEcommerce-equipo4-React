@@ -1,21 +1,26 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
+
+import SideBar from './components/SideBar';
+import MainArea from './components/MainArea';
+import Router from './routes/Router';
 
 
 function App() {
   return(
     <BrowserRouter>
-          <SideBar/>
-          <MainArea>
-          
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/products" element={<ProductsList/>}/>
-                <Route path="/products/:id" element={<ProductsList/>}/>
-                <Route path="/products/new" element={<NewProductView/>}/>
-                <Route path="*" element={<NotFound/>}/>
-            </Routes>
+        <div className='body-content'>
+            <SideBar/>
 
-          </MainArea>
+
+            <MainArea>
+            
+                {/* <Header/> */}
+
+                <Router/>
+
+            </MainArea>
+        </div>
     </BrowserRouter>
 );
 }
