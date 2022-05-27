@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Router from './routes/Router';
+import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
@@ -6,15 +7,7 @@ function App() {
     <BrowserRouter>
           <SideBar/>
           <MainArea>
-          
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/products" element={<ProductsList/>}/>
-                <Route path="/products/:id" element={<ProductsList/>}/>
-                <Route path="/products/new" element={<NewProductView/>}/>
-                <Route path="*" element={<NotFound/>}/>
-            </Routes>
-
+            <Router/>
           </MainArea>
     </BrowserRouter>
 );
