@@ -1,19 +1,22 @@
 import Router from './routes/Router';
 import { BrowserRouter } from 'react-router-dom';
-import SideBar from "./components/SideBar;"
-import MainArea from "./components/MainArea;"
+import Home from './pages/home/Home';
 
 
 function App() {
   return(
-    <BrowserRouter>
-          <SideBar/>
-          <MainArea>
-          <Router/>
-
-          </MainArea>
-    </BrowserRouter>
-);
+         <Home/>    
+  );
 }
 
 export default App;
+
+/*
+<BrowserRouter>
+          <SideBar/>
+          <MainArea>
+            <Router/>
+          </MainArea
+  </BrowserRouter>
+    
+*/

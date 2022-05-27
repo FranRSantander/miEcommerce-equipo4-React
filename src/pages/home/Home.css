@@ -1,0 +1,12 @@
+.body{
+    background-color: #efefef;
+}
+/*DARK MODE*/
+.darkBody{
+    background-color: #222222;
+    color: white;
+}
+
+.contenedorTarjeta{
+    flex-wrap: wrap;
+}
