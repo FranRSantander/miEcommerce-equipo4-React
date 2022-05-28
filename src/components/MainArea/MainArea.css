@@ -1,12 +1,11 @@
 .mainAreaContent{
     width: 100vw;
-    height: 100vh;
     /*pasar a dark mode*/
     background-color: #222222;
     color: white;
 }
 /*DARK MODE*/
-body.dark.mainAreaContent{
+body.dark .mainAreaContent{
     /*pasar a ligth mode*/
     background-color: #efefef;
     color: black;

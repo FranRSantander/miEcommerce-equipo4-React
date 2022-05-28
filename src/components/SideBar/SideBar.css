@@ -9,5 +9,43 @@
     .sideBar{
         position: relative;
         left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .logoLink {
+        text-decoration: none;
+      }
+      .logo1 {
+        font-size: 32px;
+        font-weight: 800;
+        color: #0cb093;
+        letter-spacing: -0.1em;
+      }
+      .logo2 {
+        font-size: 32px;
+        color: #0cb093;
+        letter-spacing: -0.1em;
+        font-weight: 300;
+      }
+    .navSide {
+        margin-top: 30px;
+    }
+    .navItem {
+        padding: 5px;
+    }
+    .navList {
+        list-style: none;
+    }
+    .navLink {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+    }
+    .active {
+        background-color: #ffffff3b;
+        border-radius: 8px;
     }
 }

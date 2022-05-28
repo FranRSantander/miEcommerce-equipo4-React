@@ -1,18 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
+import Home from '../pages/Home/Home'
 
-import Home from '../components/Home';
+function Router (){
+    return(
 
-const Router = () => {
-  return (
-    <Routes>
-        <Route path="/" element={<Home/>}/>
-        
-        {/* <Route path="/products" element={<ProductsList/>}/>
-        <Route path="/products/:id" element={<ProductsView/>}/>
-        <Route path="/products/new" element={<NewProductView/>}/>
-        <Route path="*" element={<NotFound/>}/> */}
-    </Routes>
-  )
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            {/* <Route path="/products" element={<ProductsList/>}/>
+            <Route path="/products/:id" element={<ProductView/>}/>
+            <Route path="/products/new" element={<NewProductView/>}/>
+            <Route path="*" element={<NotFound/>}/> */}
+        </Routes>
+    );
 }
 
 export default Router
