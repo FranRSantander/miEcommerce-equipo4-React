@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap"); 
+
+
+.productDiv{
+    font-family:'Open Sans';
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
