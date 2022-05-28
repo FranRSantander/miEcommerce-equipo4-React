@@ -3,7 +3,7 @@
     height: 100vh;
     position: absolute;
     left: -296px;
-    background-color: red;
+    background-color: #222222;
 }
 @media (min-width: 1024px){
     .sideBar{
