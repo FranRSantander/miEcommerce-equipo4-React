@@ -1,19 +1,21 @@
 import React, {useState, useEffect} from 'react'
 import{Link} from "react-router-dom"
-import MockCard from '../../../components/MockCard'
-import MockHeader from '../../../components/MockHeader'
+// import MockCard from '../../../components/MockCard'
+import TarjetaCuerpo from '../../../components/Tarjeta/TarjetaCuerpo'
+// import MockHeader from '../../../components/MockHeader'
+import Header from '../../../components/Header/Header'
 import flecha from "../../../assets/chevron-right.svg"
 import "./ProductsList.css"
-import "../../../components/MockCard.css"
-import "../../../components/MockHeader.css"
+// import "../../../components/MockCard.css"
+import "../../../components/Tarjeta/Tarjeta.css"
+import "../../../components/Header/Header.css"
 import { getProducts } from '../../../utils/api'
 
 const ProductsList = () => {
 
-  const [productos, setProductos] = useState([]);
-  const [query, setQuery] = useState("");
-  const [searchParam] = useState(["title"]);
-
+  const [productos, setProductos] = useState([]);   
+  const [inputValue, setInputValue] = useState("");
+  
   useEffect(()=>{
     getProducts()
     .then(res=> res.json())
@@ -22,31 +24,27 @@ const ProductsList = () => {
     })
   }, [])
 
-  /* const consoleL = ()=>{console.log(productos.length)} */
-
-  const buscar = (e)=>{
-    /* console.log(typeof e.target.value) */
-    let inputValue = e.target.value;
-    if(inputValue === productos.title) {
-      setProductos()
-    }
-  }
- 
-
-
   return (
     <div className="productDiv">
         {/*Header de Lista de Productos*/}  
-      <MockHeader title="Products">
-        <input className="inputBuscador" type="text" placeholder="Buscar productos..." onChange={buscar}/>
+      <Header title="Products">
+        <input className="inputBuscador" type="text" placeholder="Buscar productos..." onChange={(e)=>{setInputValue(e.target.value)}}/>
         <Link to="/products/new"><input className="botonAgregarProd" type="button" id="boton-agregar" value="Agregar Producto"/></Link>
-      </MockHeader>
+      </Header>
         {/*Sección del Cuerpo de Lista de Productos*/} 
         {(productos.length > 0) ?
           <div className="content">
-            {productos.map((product)=>{ 
-            return <MockCard key={product.id}>
-                    <div className="productInfo">       {/*div que contiene el detalle del producto  */}       
+            {productos.filter(element =>{
+              if(inputValue === ""){
+                return element;
+              }else if(element.title.toLowerCase().includes(inputValue.toLowerCase())){
+                return element;
+              }else{
+                return null
+              }
+            }).map((product, i)=>{                                  
+            return <TarjetaCuerpo key={product.title+i}>
+                    <div className="productInfo">          
                       <img className="productImg" src={product.image} alt="product" style={{height: "50px", width:"50px", borderRadius:"15px"}}></img>
                       <div>
                         <h4 className="tituloProducto">{product.title}</h4>
@@ -56,13 +54,12 @@ const ProductsList = () => {
                     <div>             {/*div que contiene la flechita  */}
                       <Link to={`/products/${product.id}`}><img href={`/products/:${product.id}`} src={flecha} alt="arrow" ></img></Link>
                     </div>
-                  </MockCard>
+                  </TarjetaCuerpo>
         })}
           </div>
           :
           <h1 style={{color:"white"}}>Cargando...</h1>
-        } 
-    {/* <button onClick={consoleL}>click</button> */}
+        }
     </div>
   )
 }

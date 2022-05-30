@@ -1,0 +1,25 @@
+.botones button{
+    border-radius: 18px;
+    border: 0px;
+    padding: 4px 16px;
+    color:rgb(222, 222, 222);
+    background-color: gray;
+    margin: 3px;
+    font-size: 0.8rem;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+    left: 5px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.numero{
+    font-weight: 700;
+}

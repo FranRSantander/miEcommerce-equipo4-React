@@ -14,10 +14,7 @@ const FormProduct = (props) => {
     }
 
   return (
-     <form onSubmit={handleFormSubmit}>
-    //
-
-
+     <form className='formBody' onSubmit={handleFormSubmit}>
         <h3>Infromación</h3>
         <div>
             <label>Nombre</label>
@@ -28,7 +25,6 @@ const FormProduct = (props) => {
                 onChange={handleInputChange}
             />
         </div>
-
         <div>
             <label>Valor</label>
             <input
@@ -38,20 +34,16 @@ const FormProduct = (props) => {
             onChange={handleInputChange}
             />
         </div>
-
         <div>
             <label>Descripción</label>
             <textarea name="description"/>
         </div>
-
         <div>
             <button>-</button>
             <span >1</span>
             <button>+</button>
         </div>
-
         <h3>Galería de imágenes</h3>
-
         <div>
             <label>Nueva Imagen</label>
             <input
@@ -61,12 +53,9 @@ const FormProduct = (props) => {
                 onChange={handleInputChange}
             />
         </div>
-
         <div>
             <button type='submit'>Guardar</button>
         </div>
-
-
     </form>
   )
 }
