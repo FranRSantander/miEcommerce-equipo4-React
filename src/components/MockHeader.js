@@ -5,7 +5,7 @@ const MockHeader = (props) => {
   return (
     <div className="header">
       <div className="leftSideHeader">
-        <img src={menu} alt="menu" />
+        <img src={menu} alt="menu"  />
         <div className="headerTitle">{props.title}</div>
       </div>
       <div className="rightSideHeader">
