@@ -1,4 +1,4 @@
-.headerProducts{
+.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,10 +27,12 @@
     background-position: 95%;
     padding: 5px;
     width: 30px;
+    color: white;
 }
 .botonAgregarProd{
     display: none;
 }
+
 
 
 
