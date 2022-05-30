@@ -1,0 +1,85 @@
+.sideBar{
+    width: 296px;
+    height: 100vh;
+    position: absolute;
+    left: -296px;
+    background-color: #222222;
+}
+.userIcon {
+    display: none;
+}
+@media (min-width: 1024px){
+    .sideBar{
+        position: relative;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logoLink {
+        text-decoration: none;
+      }
+      .logo1 {
+        font-size: 32px;
+        font-weight: 800;
+        color: #0cb093;
+        letter-spacing: -0.1em;
+      }
+      .logo2 {
+        font-size: 32px;
+        color: #0cb093;
+        letter-spacing: -0.1em;
+        font-weight: 300;
+      }
+    .navSide {
+        margin-top: 30px;
+    }
+    .navItem {
+        padding: 5px;
+    }
+    .navList {
+        list-style: none;
+    }
+    .navLink {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+    }
+    .navLogo {
+        padding-right: 10px;
+    }
+    .active {
+        background-color: #ffffff3b;
+        border-radius: 10px;
+    }
+    .userBlock{
+        background: #ffffff3b;
+        height: 35px;
+        display: flex;
+        border-radius: 30px;
+        width: 80%;
+        align-items: center;
+        
+    }
+    .userLink{
+        text-decoration: none;
+        color: white;
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+    .userIcon {
+        width: 25px;
+        height: 25px;
+        margin-left: 8px;
+        border-radius: 100%;
+        display: block;
+    }
+    .userName {
+        font-size: 16px;
+    }
+}

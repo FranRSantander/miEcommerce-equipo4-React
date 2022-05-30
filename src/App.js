@@ -1,28 +1,28 @@
-import Router from './routes/Router';
 import { BrowserRouter } from 'react-router-dom';
-import Home from './pages/home/Home';
-import Header from './components/Header';
+import './App.css';
+
+import SideBar from './components/SideBar/SideBar';
+import MainArea from './components/MainArea/MainArea';
+import Router from './routes/Router';
 
 
 function App() {
   return(
-    <div>
-         <Header>
-           <h1>Holis</h1>
-         </Header>
-          <h2>dadadada</h2>
-    </div>
-  );
+    <BrowserRouter>
+        <div className='bodyContent'>
+            <SideBar/>
+
+
+            <MainArea>
+            
+                {/* <Header/> */}
+
+                <Router/>
+
+            </MainArea>
+        </div>
+    </BrowserRouter>
+);
 }
 
 export default App;
-
-/*
-<BrowserRouter>
-          <SideBar/>
-          <MainArea>
-            <Router/>
-          </MainArea
-</BrowserRouter>
-    
-*/
