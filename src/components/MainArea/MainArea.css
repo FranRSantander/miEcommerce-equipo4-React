@@ -4,9 +4,8 @@
     background-color: #222222;
     color: white;
 }
-/*DARK MODE*/
-body.dark .mainAreaContent{
-    /*pasar a ligth mode*/
+/* Light mode usando el body */
+body.light .mainAreaContent{
     background-color: #efefef;
     color: black;
 }
