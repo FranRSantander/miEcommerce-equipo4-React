@@ -9,10 +9,9 @@ import "../../../components/MockHeader.css"
 
 const ProductsList = () => {
 
-  const [productos, setProductos] = useState([]);
-  const [query, setQuery] = useState("");
-  const [searchParam] = useState(["title"]);
-
+  const [productos, setProductos] = useState([]);   
+  const [inputValue, setInputValue] = useState("");
+  
   useEffect(()=>{
     fetch("http://localhost:3000/products")
     .then(res=> res.json())
@@ -21,31 +20,27 @@ const ProductsList = () => {
     })
   }, [])
 
-  /* const consoleL = ()=>{console.log(productos.length)} */
-
-  const buscar = (e)=>{
-    /* console.log(typeof e.target.value) */
-    let inputValue = e.target.value;
-    if(inputValue === productos.title) {
-      setProductos()
-    }
-  }
- 
-
-
   return (
     <div className="productDiv">
         {/*Header de Lista de Productos*/}  
       <MockHeader title="Products">
-        <input className="inputBuscador" type="text" placeholder="Buscar productos..." onChange={buscar}/>
+        <input className="inputBuscador" type="text" placeholder="Buscar productos..." onChange={(e)=>{setInputValue(e.target.value)}}/>
         <Link to="/products/new"><input className="botonAgregarProd" type="button" id="boton-agregar" value="Agregar Producto"/></Link>
       </MockHeader>
         {/*Sección del Cuerpo de Lista de Productos*/} 
         {(productos.length > 0) ?
           <div className="content">
-            {productos.map((product)=>{ 
-            return <MockCard key={product.id}>
-                    <div className="productInfo">       {/*div que contiene el detalle del producto  */}       
+            {productos.filter(element =>{       
+              if(inputValue === ""){
+                return element;
+              }else if(element.title.toLowerCase().includes(inputValue.toLowerCase())){
+                return element;
+              }else{
+                return null
+              }
+            }).map((product, i)=>{                                  
+            return <MockCard key={product.title+i}>
+                    <div className="productInfo">          
                       <img className="productImg" src={product.image} alt="product" style={{height: "50px", width:"50px", borderRadius:"15px"}}></img>
                       <div>
                         <h4 className="tituloProducto">{product.title}</h4>
@@ -61,7 +56,6 @@ const ProductsList = () => {
           :
           <h1 style={{color:"white"}}>Cargando...</h1>
         } 
-    {/* <button onClick={consoleL}>click</button> */}
     </div>
   )
 }
