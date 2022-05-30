@@ -1,0 +1,15 @@
+.header {
+    background-color: #222222;
+    color: white;
+    height: 72px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+  }
+  .headerContainer{
+    margin-bottom: 72px;
+  }

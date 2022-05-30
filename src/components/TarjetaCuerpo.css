@@ -1,0 +1,15 @@
+.tarjeta{
+    position: relative;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: row;
+    background-color: #494F51;
+    color: white;
+    height: 50px;
+    width: 55%;
+    padding-right: 10px;
+    padding-left: 10px;
+    justify-content: space-between;
+    margin: 5px 0px;
+    align-items: center;
+}

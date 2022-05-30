@@ -5,8 +5,8 @@ import NewProduct from '../pages/Products/NewProduct/NewProduct';
 
 function Router (){
     return(
-
         <Routes>
+            {/*
             <Route path="/" element={<Home/>}/>
             <Route path="/products" element={<ProductsList/>}/>
             <Route path="/products/new" element={<NewProduct/>}/>
