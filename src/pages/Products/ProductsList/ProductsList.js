@@ -45,8 +45,8 @@ const ProductsList = () => {
 
     {/*Sección del Cuerpo de Lista de Productos*/}  
     <div className="content">
-    {products.map((product)=>{ 
-      return <MockCard>
+    {products.map((product, i)=>{ 
+      return <MockCard key={product.name + i}>
               <div className="productInfo">       {/*div que contiene el detalle del producto  */}       
                 <img className="productImg" src={product.img} alt="product"></img>
                 <div>

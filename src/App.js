@@ -5,23 +5,26 @@ import SideBar from './components/SideBar/SideBar';
 import MainArea from './components/MainArea/MainArea';
 import Router from './routes/Router';
 
+import ThemeProvider from './context/ThemeContext';
 
 function App() {
   return(
-    <BrowserRouter>
-        <div className='bodyContent'>
-            <SideBar/>
+    <ThemeProvider>
+        <BrowserRouter>
+                <div className='bodyContent'>
+                    <SideBar/>
 
 
-            <MainArea>
-            
-                {/* <Header/> */}
+                    <MainArea>
+                    
+                        {/* <Header/> */}
 
-                <Router/>
+                        <Router/>
 
-            </MainArea>
-        </div>
-    </BrowserRouter>
+                    </MainArea>
+                </div>
+        </BrowserRouter>
+    </ThemeProvider>
 );
 }
 

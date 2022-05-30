@@ -5,6 +5,17 @@
     left: -296px;
     background-color: #222222;
 }
+/* Light mode usando el body */
+body.light .sideBar{
+    background-color: #efefef;
+}
+body.light .navLink{
+    color: black;
+}
+body.light .sideBar .active{
+    background-color: #00000033;
+}
+
 @media (min-width: 1024px){
     .sideBar{
         position: relative;

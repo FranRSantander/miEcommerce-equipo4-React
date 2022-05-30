@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { themeContext } from '../../context/ThemeContext';
 import { Link, NavLink } from 'react-router-dom';
 import './SideBar.css';
 import home from '../../assets/home.svg'
@@ -6,8 +7,11 @@ import box from '../../assets/box.svg'
 import store from '../../assets/store.svg'
 
 function SideBar () {
+
+    const { handleTheme } = useContext(themeContext);
+
     return(
-        <div className='sideBar'>
+        <div className="sideBar">
             <div className='sideBarContent'>
                 <figure className='logoBlock'>
                     <Link className="logoLink" to='/'><span className='logo1'>Mi</span><span className='logo2'>Ecommerce</span></Link>
@@ -18,6 +22,7 @@ function SideBar () {
                         <li className='navItem'><NavLink className='navLink' to='/products'><img src={box}/><span>Productos</span></NavLink></li>
                         <li className='navItem'><NavLink className='navLink' to='stores'><img src={store}/><span>Tiendas</span></NavLink></li>
                     </ul>
+                    <button onClick={handleTheme}>Cambiar tema Oscuro/Claro</button>
                 </nav>
             </div>
             <figure className='userBlock'>
