@@ -1,4 +1,4 @@
-const url = "http://localhost:3000/products";
+const url = "http://localhost:3002/products";
 
 const getProducts = () => {
     return fetch(url)
