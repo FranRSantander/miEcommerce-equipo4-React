@@ -11,7 +11,6 @@ const MockHeader = (props) => {
       <div className="rightSideHeader">
         {props.children}
       </div>
-      
     </div>
   )
 }
