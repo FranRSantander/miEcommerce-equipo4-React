@@ -12,6 +12,9 @@
 body.light .sideBar{
     background-color: #efefef;
 }
+body.light .userBlock{
+    background-color: gray;
+}
 body.light .navLink{
     color: black;
 }
