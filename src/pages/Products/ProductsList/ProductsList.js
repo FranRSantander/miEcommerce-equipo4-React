@@ -6,6 +6,7 @@ import flecha from "../../../assets/chevron-right.svg"
 import "./ProductsList.css"
 import "../../../components/MockCard.css"
 import "../../../components/MockHeader.css"
+import { getProducts } from '../../../utils/api'
 
 const ProductsList = () => {
 
@@ -14,7 +15,7 @@ const ProductsList = () => {
   const [searchParam] = useState(["title"]);
 
   useEffect(()=>{
-    fetch("http://localhost:3000/products")
+    getProducts()
     .then(res=> res.json())
     .then(data=>{
       setProductos(data)
