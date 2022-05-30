@@ -1,0 +1,11 @@
+.mainAreaContent{
+    width: 100vw;
+    /*pasar a dark mode*/
+    background-color: #222222;
+    color: white;
+}
+/* Light mode usando el body */
+body.light .mainAreaContent{
+    background-color: #efefef;
+    color: black;
+}
