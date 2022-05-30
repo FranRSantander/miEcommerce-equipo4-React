@@ -8,13 +8,14 @@ const FormProduct = (props) => {
     })
 
 
-    const enviarProducto = (e) => {
+    const handleFormSubmit = (e) => {
         e.preventDefault()
-        console.log(values);
+        props.handleSubmit(values)
     }
+
   return (
-    // <form onSubmit={props.initialValue}>
-    <form onSubmit={enviarProducto}>
+     <form onSubmit={handleFormSubmit}>
+    //
 
 
         <h3>Infromación</h3>
