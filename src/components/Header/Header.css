@@ -37,7 +37,12 @@
   align-items: center;
   font-size: 10px;
 }
-
+/* Light mode */
+body.light .header{
+    background-color: #efefef;
+    color: black;
+  }
+  
 @media (min-width: 425px){
     .inputBuscador{
         border-radius: 16px;
