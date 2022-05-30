@@ -37,7 +37,7 @@ const Home = () => {
                 <button>Agregar Producto</button>
               </div>
         </TarjetaCuerpo>
-        <h2>Y aca el contenido del Home</h2>
+        
     
     </>
   )
