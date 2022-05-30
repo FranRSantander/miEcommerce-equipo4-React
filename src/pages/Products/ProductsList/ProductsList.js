@@ -9,7 +9,7 @@ import "../../../components/MockHeader.css"
 
 const ProductsList = () => {
 
-  const [productos, setProductos] = useState([]);   /* son los productos traidos de la api y los filtrados */
+  const [productos, setProductos] = useState([]);   
   const [inputValue, setInputValue] = useState("");
   
   useEffect(()=>{
@@ -30,7 +30,7 @@ const ProductsList = () => {
         {/*Sección del Cuerpo de Lista de Productos*/} 
         {(productos.length > 0) ?
           <div className="content">
-            {productos.filter(element =>{
+            {productos.filter(element =>{       
               if(inputValue === ""){
                 return element;
               }else if(element.title.toLowerCase().includes(inputValue.toLowerCase())){
@@ -38,9 +38,9 @@ const ProductsList = () => {
               }else{
                 return null
               }
-            }).map((product, i)=>{ 
+            }).map((product, i)=>{                                  
             return <MockCard key={product.title+i}>
-                    <div className="productInfo">       {/*div que contiene el detalle del producto  */}       
+                    <div className="productInfo">          
                       <img className="productImg" src={product.image} alt="product" style={{height: "50px", width:"50px", borderRadius:"15px"}}></img>
                       <div>
                         <h4 className="tituloProducto">{product.title}</h4>
@@ -56,7 +56,6 @@ const ProductsList = () => {
           :
           <h1 style={{color:"white"}}>Cargando...</h1>
         } 
-    {/* <button onClick={consoleL}>click</button> */}
     </div>
   )
 }
