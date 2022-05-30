@@ -1,41 +1,25 @@
-.tarjeta{
-    position: relative;
-    display: flex;
-    border-radius: 16px;
-    flex-direction: row;
-    background-color: #494F51;
-    color: white;
-    height: 45px;
-    width: 55%;
-    padding-top: 13px;
-    padding-left: 13px;
-    justify-content: space-between;
-    margin: 5px 0px;
-    align-items: center;
-
-}
-
-.tarjeta ol{
-    display: flex;
-    right: auto;
-    flex-direction: row;
-    list-style: none;
-    justify-content: space-between;
-}
-
-.tarjeta ol li{
-    margin: 2px;
-}
-
-.tarjeta button{
-    border-radius: 16px;
-    padding: 5px;
-    color:white;
+.botones button{
+    border-radius: 18px;
+    border: 0px;
+    padding: 4px 16px;
+    color:rgb(222, 222, 222);
     background-color: gray;
+    margin: 3px;
+    font-size: 0.8rem;
 }
 
 .botones{
     display: flex;
     justify-content: space-between;
     left: 5px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.numero{
+    font-weight: 700;
 }

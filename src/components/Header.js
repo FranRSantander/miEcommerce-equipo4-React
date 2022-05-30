@@ -1,9 +1,14 @@
 import React from 'react'
+import "./Header.css"
 
-const Header = (props) => {
+const Header = ({children}) => {
 
   return (
-    <h1>¡Hola {props}!</h1>
+    <div className='headerContainer'>
+      <div className='header'>
+        {children}
+      </div>
+    </div>
   )
 } 
 
