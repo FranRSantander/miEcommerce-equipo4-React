@@ -1,15 +1,20 @@
 .header {
-    background-color: #222222;
-    color: white;
-    height: 72px;
-    position: relative;
-    top: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    padding: 0px 10px;
-  }
-  .headerContainer{
-    margin-bottom: 72px;
-  }
+  background-color: #222222;
+  color: white;
+  height: 72px;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+.headerContainer{
+  margin-bottom: 72px;
+}
+/* Light mode */
+body.light .header{
+  background-color: #efefef;
+  color: black;
+}
