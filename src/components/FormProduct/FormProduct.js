@@ -1,10 +1,12 @@
 import { useForm } from '../../hooks/useForm'
 import './FormProduct.css'
+
 const FormProduct = (props) => {
 
     const [ values, handleInputChange ] = useForm({
         title: "",
-        price: ""
+        price: "",
+        description: ""
     })
 
 
@@ -38,7 +40,11 @@ const FormProduct = (props) => {
         </div>
         <div className='formBody'>
             <label>Descripción</label>
-            <textarea className='inputForm' name="description"/>
+            <textarea 
+            className='inputForm' 
+            name="description"
+            onChange={handleInputChange}
+            />
         </div>
         <div>
             <button>-</button>
