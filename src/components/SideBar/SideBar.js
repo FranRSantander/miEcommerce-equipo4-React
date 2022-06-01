@@ -19,7 +19,7 @@ function SideBar () {
                 </figure>
                 <nav className='navSide'>
                     <ul className='navList'>
-                        <li className='navItem'><NavLink className='navLink' to='/'><img className='navLogo' src={home} alt='home-vector' /><span>Inicio</span></NavLink></li>
+                        <li className='navItem'><NavLink className='navLink' to='/'><img className='navLogo' src={home} alt='home-vecto' /><span>Inicio</span></NavLink></li>
                         <li className='navItem'><NavLink className='navLink' to='/products'><img className='navLogo' src={box} alt='caja-vector' /><span>Productos</span></NavLink></li>
                         <li className='navItem'><NavLink className='navLink' to='stores'><img className='navLogo' src={store} alt='tienda-vector' /><span>Tiendas</span></NavLink></li>
                     </ul>
