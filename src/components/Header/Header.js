@@ -1,16 +1,25 @@
 import React from 'react'
 import "./Header.css"
+import menu from "../../assets/menu.svg"
 
 const Header = (props) => {
 
   return (
-    <div className='headerContainer'>
-      <div className='header'>
-        <div>
-          {props.title}
-        </div>
-        {props.children}
-      </div>
+    <div className='header'>
+      
+        
+
+          <div>
+            <img src={menu} alt="menu" />
+            {props.title}
+          </div>
+
+          <div className="rightSide">
+          {props.children}
+          </div>
+        
+        
+      
     </div>
   )
 } 

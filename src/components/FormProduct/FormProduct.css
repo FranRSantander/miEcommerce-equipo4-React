@@ -1,0 +1,9 @@
+.formBody {
+    flex-direction: column;
+    display: flex;
+}
+.inputForm {
+    padding: 8px;
+    width: 20%;
+    margin: 10px;
+}
