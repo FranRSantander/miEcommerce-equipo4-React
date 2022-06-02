@@ -23,7 +23,7 @@ function SideBar () {
                         <li className='navItem'><NavLink className='navLink' to='/products'><img className='navLogo' src={box} alt='caja-vector' /><span>Productos</span></NavLink></li>
                         <li className='navItem'><NavLink className='navLink' to='stores'><img className='navLogo' src={store} alt='tienda-vector' /><span>Tiendas</span></NavLink></li>
                     </ul>
-                    <button onClick={handleTheme}>Cambiar tema Oscuro/Claro</button>
+                    <button type='button' className='themeButton'onClick={handleTheme}>Cambiar tema Oscuro/Claro</button>
                 </nav>
             </div>
             <figure className="userBlock">

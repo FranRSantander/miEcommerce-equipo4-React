@@ -60,7 +60,7 @@ const FormProduct = (props) => {
             />
         </div>
         <div>
-            <button type='submit'>Guardar</button>
+            <button className='saveButon' type='submit'>Guardar</button>
         </div>
     </form>
   )

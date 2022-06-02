@@ -22,7 +22,15 @@
     height: 250px;
     padding: 10px;
 }
-
+.saveButon{
+    width: 5%;
+    background-color: gray;
+    color: white;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 1px;
+}
 @media (min-width: 650px){
     .inputForm {
         width: 55%;
