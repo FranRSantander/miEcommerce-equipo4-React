@@ -4,7 +4,6 @@ import ProductsList from '../pages/Products/ProductsList/ProductsList';
 import NewProduct from '../pages/Products/NewProduct/NewProduct';
 import ProductView from '../pages/Products/ProductView/ProductView';
 
-
 function Router (){
     return(
         <Routes>

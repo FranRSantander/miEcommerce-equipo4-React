@@ -14,8 +14,9 @@ const storeProduct = (data) => {
     })
 }
 
-const editProduct = (data) => {
-    return fetch(url,{
+const editProduct = (data, id) => {
+    console.log(data)
+    return fetch(`${url}/${id}`,{
         method: "PUT",
         body: JSON.stringify(data),
         headers:{
@@ -27,4 +28,5 @@ const editProduct = (data) => {
 const getProduct = (id) => {
     return fetch(`${url}/${id}`)
 }
+
 export {getProducts, getProduct, editProduct, storeProduct}

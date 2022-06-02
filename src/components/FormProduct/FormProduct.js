@@ -1,10 +1,11 @@
+import { useEffect } from 'react'
 import { useForm } from '../../hooks/useForm'
 import Contador from './Contador/Contador'
 import './FormProduct.css'
 
-const FormProduct = (props) => {
+const FormProduct = ({ handleSubmit, product = null}) => {
 
-    const [ values, handleInputChange ] = useForm({
+    const [ values, handleInputChange, setValues ] = useForm({
         title: "",
         price: "",
         description: ""
@@ -13,8 +14,27 @@ const FormProduct = (props) => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
-        props.handleSubmit(values)
+        handleSubmit(values)
     }
+
+    useEffect(() => {
+        if(product != null){
+            setValues({
+                ...values,
+                ...product
+            })
+        }
+    }, [product])
+    
+    // useEffect(() => {
+    //     if(product != null){
+    //         setValues(state => ({
+    //             // ...values,
+    //             ...state,
+    //             ...product
+    //         }))
+    //     }
+    // }, [product])
 
   return (
      <form className='formBody' onSubmit={handleFormSubmit}>
@@ -23,20 +43,22 @@ const FormProduct = (props) => {
             <label>Nombre</label>
             <input
                 className='inputForm'
-                placeholmi der=''
                 type='text'
                 name='title'
                 onChange={handleInputChange}
+                value={values.title}
+                // {product ? product.title : ''}
+                // {product && `value=${product.title}`}
             />
         </div>
         <div className='formBody'>
             <label>Valor</label>
             <input
             className='inputForm'
-            placeholder=''
             type='text'
             name='price'
             onChange={handleInputChange}
+            value={values.price}
             />
         </div>
         <Contador/>
@@ -53,7 +75,6 @@ const FormProduct = (props) => {
             <label>Nueva Imagen</label>
             <input
                 className='inputForm'
-                placeholder=''
                 type='file'
                 name='image'
                 onChange={handleInputChange}

@@ -9,7 +9,7 @@
 .userIcon {
     display: none;
 }
-/* Light mode usando el body */
+/* Light mode */
 body.light .sideBar{
     background-color: #ffffffe8;
 }

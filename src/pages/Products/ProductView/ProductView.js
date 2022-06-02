@@ -5,11 +5,12 @@ import { editProduct, getProduct } from '../../../utils/api'
 
 const ProductView = () => {
 
-    // const [ product,setProduct] = useState({});
+    const [ product,setProduct] = useState({});
 
     const handleSubmit = (data) => {
-        editProduct(data)
-        .then(response => console.log(response))
+        editProduct(data, data.id)
+        .then(response => response.json())
+        .then(data => console.log(data))
     }
     
     const { id } = useParams();
@@ -17,13 +18,14 @@ const ProductView = () => {
     useEffect(()=>{
       getProduct(id)
       .then(response => response.json())
-      .then(data=> console.log(data))
+      .then(data=> setProduct(data))
     },[])
     
     return (
         <>
           <FormProduct 
           handleSubmit={handleSubmit}
+          product={product}
           />
         </>
     )
