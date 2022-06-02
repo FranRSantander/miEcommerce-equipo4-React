@@ -1,4 +1,5 @@
 import { useForm } from '../../hooks/useForm'
+import Contador from './Contador/Contador'
 import './FormProduct.css'
 
 const FormProduct = (props) => {
@@ -22,7 +23,7 @@ const FormProduct = (props) => {
             <label>Nombre</label>
             <input
                 className='inputForm'
-                placeholder=''
+                placeholmi der=''
                 type='text'
                 name='title'
                 onChange={handleInputChange}
@@ -38,18 +39,14 @@ const FormProduct = (props) => {
             onChange={handleInputChange}
             />
         </div>
+        <Contador/>
         <div className='formBody'>
             <label>Descripción</label>
             <textarea 
-            className='inputForm' 
+            className='inputForm inputArea' 
             name="description"
             onChange={handleInputChange}
             />
-        </div>
-        <div>
-            <button>-</button>
-            <span >1</span>
-            <button>+</button>
         </div>
         <h3>Galería de imágenes</h3>
         <div className='formBody'>

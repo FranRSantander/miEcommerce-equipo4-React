@@ -1,16 +1,17 @@
 .sideBar{
-    width: 296px;
+    width: 320px;
     height: 100vh;
     position: absolute;
-    left: -296px;
-    background-color: #222222;
+    left: -320px;
+    background-color: #38343479;
+    transition: all;
 }
 .userIcon {
     display: none;
 }
 /* Light mode usando el body */
 body.light .sideBar{
-    background-color: #efefef;
+    background-color: #ffffffe8;
 }
 body.light .userBlock{
     background-color: gray;
@@ -53,6 +54,7 @@ body.light .sideBar .active{
     }
     .navList {
         list-style: none;
+        padding: 0;
     }
     .navLink {
         text-decoration: none;
