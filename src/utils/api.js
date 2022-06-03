@@ -24,9 +24,14 @@ const editProduct = (data, id) => {
         }
     })
 }
+const deleteProduct = (id) => {
+    return fetch(`${url}/${id}`, {
+        method: "DELETE"
+    })
+}
 
 const getProduct = (id) => {
     return fetch(`${url}/${id}`)
 }
 
-export {getProducts, getProduct, editProduct, storeProduct}
+export {getProducts, getProduct, editProduct, storeProduct, deleteProduct}

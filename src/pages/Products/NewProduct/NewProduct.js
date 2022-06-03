@@ -5,7 +5,6 @@ const NewProduct = () => {
 
     const handleSubmit = (data) => {
         storeProduct(data)
-        .then(response => console.log(response))
     }
     
     return (

@@ -9,6 +9,7 @@ import user from '../../assets/user.jpg'
 
 function SideBar () {
 
+// A través del context que importe, uso la funcion handleTheme en el onClick del boton del tema
     const { handleTheme } = useContext(themeContext);
 
     return(
@@ -27,7 +28,7 @@ function SideBar () {
                 </nav>
             </div>
             <figure className="userBlock">
-                <Link className="userLink" to='*'><img className='userIcon' src={user} alt='usuario'/><span className='userName'>Olivia</span></Link>
+                <Link className="userLink" to='#'><img className='userIcon' src={user} alt='usuario'/><span className='userName'>Olivia</span></Link>
             </figure>
         </div>
     );
