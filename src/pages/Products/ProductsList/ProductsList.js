@@ -52,7 +52,7 @@ const ProductsList = () => {
                       </div>
                     </div>
                     <div>             {/*div que contiene la flechita  */}
-                      <Link to={`/products/${product.id}`}><img href={`/products/:${product.id}`} src={flecha} alt="arrow" ></img></Link>
+                      <Link to={`/products/${product.id}`}><img src={flecha} alt="arrow" /></Link>
                     </div>
                   </TarjetaCuerpo>
         })}
