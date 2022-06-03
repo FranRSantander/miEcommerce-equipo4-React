@@ -1,16 +1,17 @@
 .sideBar{
-    width: 296px;
+    width: 320px;
     height: 100vh;
     position: absolute;
-    left: -296px;
-    background-color: #222222;
+    left: -320px;
+    background-color: #38343479;
+    transition: all;
 }
 .userIcon {
     display: none;
 }
 /* Light mode */
 body.light .sideBar{
-    background-color: #efefef;
+    background-color: #ffffffe8;
 }
 body.light .userBlock{
     background-color: gray;
@@ -20,10 +21,6 @@ body.light .navLink{
 }
 body.light .sideBar .active{
     background-color: #00000033;
-}
-body.light .themeButton{
-    background-color: gray;
-    color: white;
 }
 @media (min-width: 1024px){
     .sideBar{
@@ -51,12 +48,16 @@ body.light .themeButton{
       }
     .navSide {
         margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .navItem {
         padding: 5px;
     }
     .navList {
         list-style: none;
+        padding: 0;
     }
     .navLink {
         text-decoration: none;
@@ -105,5 +106,9 @@ body.light .themeButton{
         padding: 5px 0 5px 0;
         border:solid 1px rgba(0, 0, 0, 0.06);
         border-radius: 30px;
+    }
+    body.light .themeButton{
+        background-color: gray;
+        color: white;
     }
 }

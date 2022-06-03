@@ -28,7 +28,7 @@ function SideBar () {
                 </nav>
             </div>
             <figure className="userBlock">
-                <Link className="userLink" to='*'><img className='userIcon' src={user} alt='usuario'/><span className='userName'>Olivia</span></Link>
+                <Link className="userLink" to='#'><img className='userIcon' src={user} alt='usuario'/><span className='userName'>Olivia</span></Link>
             </figure>
         </div>
     );
