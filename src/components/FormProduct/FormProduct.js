@@ -33,8 +33,9 @@ const FormProduct = ({ handleSubmit, product = null}) => {
      <form className='formBody' onSubmit={handleFormSubmit}>
         <h3>Infromación</h3>
         <div className='formBody'>
-            <label>Nombre</label>
+            <label htmlFor='title'>Nombre</label>
             <input
+                id='title'
                 required
                 className='inputForm'
                 type='text'
@@ -58,7 +59,6 @@ const FormProduct = ({ handleSubmit, product = null}) => {
         <div className='formBody'>
             <label>Descripción</label>
             <textarea 
-                required
                 className='inputForm inputArea' 
                 type='text'
                 name="description"
