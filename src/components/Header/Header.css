@@ -1,29 +1,28 @@
-.header{
+.header {
+    background-color: #222222;
+    color: white;
+    height: 72px;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 8px 15px 8px;
-}
-.headerTitle{
-    font-size: 24px;
-}
-.rightSideHeader{
-    display:flex;
-    gap: 10px;
-    align-items: center;
-    font-size: 10px;
-}
-.leftSideHeader{
-    display:flex;
-}
-.buscador{
+    padding: 0px 10px;
+  }
+  .headerContainer{
+    margin-bottom: 72px;
+  }
+
+  .buscador{
     display:flex;
     align-items: center;
 }
 .inputBuscador{
     border-radius: 16px;
     border: solid 1px rgba(73, 79, 81, 1);
-    background: url("../assets/magnify.svg") no-repeat ;
+    background: url("../../assets/magnify.svg") no-repeat ;
     background-position: 95%;
     padding: 5px;
     width: 30px;
@@ -32,29 +31,27 @@
 .botonAgregarProd{
     display: none;
 }
-
-
-
-
-
-
-
-
-
+.rightSide{
+  display:flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 10px;
+}
+/* Light mode */
+body.light .header{
+    background-color: #efefef;
+    color: black;
+  }
+  
 @media (min-width: 425px){
     .inputBuscador{
         border-radius: 16px;
         border: solid 1px rgba(73, 79, 81, 1);
-        background: url("../assets/magnify.svg") no-repeat ;
+        background: url("../../assets/magnify.svg") no-repeat ;
         background-position: 95%;
         padding: 5px;
         width: 160px;
     }
-
-
-
-
-
 }
 @media (min-width: 768px){
     .botonAgregarProd{
@@ -65,10 +62,4 @@
         color:white;
         padding: 6px 6px 6px 6px;
     }
-  
-
-
-
-
-
 }
