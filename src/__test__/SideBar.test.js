@@ -1,7 +1,8 @@
 import { render, screen} from "@testing-library/react"
 import SideBar from "../components/SideBar/SideBar"
 
-test("Renderiza", ()=>{
+test("Renderiza", () => {
     render(<SideBar/>)
-    screen.debug();
+        screen.debug();
+            expect(screen.getAllByLabelText("mi")).toBeInTheDocument()
 })
