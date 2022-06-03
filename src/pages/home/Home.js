@@ -11,9 +11,7 @@ const Home = () => {
     <>
         <Header title="¡Hola Olivia!">
 
-
         </Header>
-
 
         <TarjetaCuerpo>
             <div className='contenedor'>
@@ -21,10 +19,10 @@ const Home = () => {
               <div className='numero'>123</div>
               <div>Produuctos</div>
             </div>
-              <div className='botones'>
-                <button>Ver Listado</button>
-                <button>Agregar Producto</button>
-              </div>
+            <div className='botones'>
+                <button className='botonTarjeta' type='button'>Ver Listado</button>
+                <button className='botonTarjeta' type='button'>Agregar Producto</button>
+            </div>
         </TarjetaCuerpo>
         <TarjetaCuerpo>
             <div className='contenedor'>
@@ -32,10 +30,10 @@ const Home = () => {
               <div className='numero'>10</div>
               <div>Tiendas</div>
             </div>
-              <div className='botones'>
-                <button>Ver Listado</button>
-                <button>Agregar Producto</button>
-              </div>
+            <div className='botones'>
+                <button className='botonTarjeta' type='button'>Ver Listado</button>
+                <button className='botonTarjeta' type='button'>Agregar Tiendas</button>
+            </div>
         </TarjetaCuerpo>
         
     

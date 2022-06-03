@@ -21,6 +21,10 @@ body.light .navLink{
 body.light .sideBar .active{
     background-color: #00000033;
 }
+body.light .themeButton{
+    background-color: gray;
+    color: white;
+}
 @media (min-width: 1024px){
     .sideBar{
         position: relative;
@@ -94,5 +98,12 @@ body.light .sideBar .active{
     }
     .userName {
         font-size: 16px;
+    }
+    .themeButton{
+        align-self: center;
+        width: 90%;
+        padding: 5px 0 5px 0;
+        border:solid 1px rgba(0, 0, 0, 0.06);
+        border-radius: 30px;
     }
 }

@@ -1,4 +1,14 @@
-.botones button{
+/* .botones button{
+    border-radius: 18px;
+    border: 0px;
+    padding: 4px 16px;
+    color:rgb(222, 222, 222);
+    background-color: gray;
+    margin: 3px;
+    font-size: 0.8rem;
+} */
+
+.botonTarjeta{
     border-radius: 18px;
     border: 0px;
     padding: 4px 16px;
