@@ -1,12 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import{Link} from "react-router-dom"
-// import MockCard from '../../../components/MockCard'
 import TarjetaCuerpo from '../../../components/Tarjeta/TarjetaCuerpo'
-// import MockHeader from '../../../components/MockHeader'
 import Header from '../../../components/Header/Header'
 import flecha from "../../../assets/chevron-right.svg"
 import "./ProductsList.css"
-// import "../../../components/MockCard.css"
 import "../../../components/Tarjeta/Tarjeta.css"
 import "../../../components/Header/Header.css"
 import { getProducts } from '../../../utils/api'

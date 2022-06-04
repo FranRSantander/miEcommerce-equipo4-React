@@ -4,8 +4,9 @@ import TarjetaCuerpo from './TarjetaCuerpo'
 
 const Tarjeta = ({imagen, cantidad, texto}) => {
   return (
-        <TarjetaCuerpo>
-            <div className='contenedor'>
+        <div>
+
+          <div className='contenedor'>
               <img src = {imagen} alt="imagen"/>
               <div className='numero'>{cantidad}</div>
               <div>{texto}</div>
@@ -14,7 +15,11 @@ const Tarjeta = ({imagen, cantidad, texto}) => {
                 <button>Ver Listado</button>
                 <button>Agregar Producto</button>
               </div>
-        </TarjetaCuerpo>
+
+
+        </div>
+           
+        
   )
 }
 
