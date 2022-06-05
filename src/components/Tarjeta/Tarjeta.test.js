@@ -4,7 +4,6 @@ import {BrowserRouter, BrowserRouter as Router, Switch, useLocation} from "react
 import {renderHook} from "@testing-library/react-hooks"
 import {useProduct} from "../../pages/Products/ProductsList/ProductsList"
 
-
 const products =[
     {
         "title": "Mens Casual Premium Slim Fit T-Shirts",
@@ -14,50 +13,58 @@ const products =[
         "category": "men's clothing",
         "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
         }
-      ,
-      {
-        "title": "Mens Cotton JacketCAMBIOO2",
-        "price": 55.99,
-        "id": 3,
-        "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-        "category": "men's clothing",
-        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-      
-        } 
 ]
 
-
 describe("Tarjeta", ()=>{
-
-    it("debe recibir los datos de la api", ()=>{
-        const mockFunction = jest.fn(()=>products)
-        
-        render(<BrowserRouter>
-                    <Tarjeta 
-                    productos={mockFunction()}
-                    inputValue=""
-                    />
-                </BrowserRouter>
-        )
-    expect(mockFunction).toHaveBeenCalledTimes(1);
+    describe("cuando hay Productos", ()=>{
+        beforeEach(()=>{
+            const mockFunction = jest.fn(()=>products)
+            render(<BrowserRouter>
+                        <Tarjeta 
+                        productos={mockFunction()}
+                        inputValue=""
+                        />
+                    </BrowserRouter>
+            )
+        })
+        it("debe recibir los datos de la api", ()=>{
+    
+            const mockFunction = jest.fn(()=>products)
+            render(<BrowserRouter>
+                        <Tarjeta 
+                        productos={mockFunction()}
+                        inputValue=""
+                        />
+                    </BrowserRouter>
+            )
+        expect(mockFunction).toHaveBeenCalledTimes(1);
+        })
+        it("debe mostrar tantas instancias de Product como cantidad de productos provistos", ()=>{
+          
+        expect(screen.getAllByTestId("product-item")).toHaveLength(1)
+        screen.debug()
+        })
+        it("debe mostrar el nombre y id del Producto", ()=>{
+            const titulo = screen.getByRole("heading", {level: 4})
+            const id = screen.getByTestId("product-id")
+            expect(titulo.innerHTML).toMatch(/Mens Casual Premium Slim Fit T-Shirts/i)
+            expect(id.innerHTML).toMatch(/2/)
+        })
     })
-
-    it("debe mostrar tantas instancias de Product como cantidad de productos provistos", ()=>{
-        const mockFunction = jest.fn(()=>products)
-        
+    describe("cuando no hay productos", ()=>{
+        beforeEach(()=>{
+            const mockFunction = jest.fn(()=>[])
         render(<BrowserRouter>
-                    <Tarjeta 
-                    productos={mockFunction()}
-                    inputValue=""
-                    />
-                </BrowserRouter>
-        )
-    expect(screen.getAllByTestId("product-item")).toHaveLength(2)
-    screen.debug()
+                        <Tarjeta 
+                        productos={mockFunction()}
+                        inputValue=""
+                        />
+                    </BrowserRouter>
+            )
+        })
+        it("debe mostrar un cartel de Cargando...", ()=>{
+            const tituloCargando = screen.getByRole("heading", {level:1})
+            expect(tituloCargando.innerHTML).toMatch(/cargando/i)
+        })
     })
-
-
-
-
-
 })

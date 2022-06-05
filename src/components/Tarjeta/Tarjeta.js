@@ -21,10 +21,10 @@ const Tarjeta = ({productos, inputValue}) => {
             }).map((product, i)=>{                                  
             return <TarjetaCuerpo key={product.title+i} >
                     <div className="productInfo">          
-                      <img className="productImg" src={product.image} alt="product" style={{height: "50px", width:"50px", borderRadius:"15px"}}></img>
+                      <img data-testid="img-id" className="productImg" src={product.image} alt="product" style={{height: "50px", width:"50px", borderRadius:"15px"} }></img>
                       <div>
                         <h4 className="tituloProducto">{product.title}</h4>
-                        <span className="idNumber">#{product.id}</span>
+                        <span className="idNumber" data-testid="product-id">#{product.id}</span>
                       </div>
                     </div>
                     <div>             {/*div que contiene la flechita  */}
