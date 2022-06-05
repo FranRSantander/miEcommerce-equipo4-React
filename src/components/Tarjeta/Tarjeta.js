@@ -19,7 +19,7 @@ const Tarjeta = ({productos, inputValue}) => {
                 return null
               }
             }).map((product, i)=>{                                  
-            return <TarjetaCuerpo key={product.title+i}>
+            return <TarjetaCuerpo key={product.title+i} >
                     <div className="productInfo">          
                       <img className="productImg" src={product.image} alt="product" style={{height: "50px", width:"50px", borderRadius:"15px"}}></img>
                       <div>

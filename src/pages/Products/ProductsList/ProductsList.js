@@ -8,11 +8,12 @@ import "../../../components/Header/Header.css"
 import { getProducts } from '../../../utils/api'
 import { Link } from 'react-router-dom'
 
+
 const ProductsList = () => {
 
   const [inputValue, setInputValue] = useState("");
 
-  function useProduct(){
+   function useProduct(){
 
     const [productos, setProductos] = useState([]);   
     
@@ -24,7 +25,7 @@ const ProductsList = () => {
       })
     }, [])
 
-    return {productos, inputValue}
+    return {productos}
 
   }
 
@@ -45,4 +46,4 @@ const ProductsList = () => {
   )
 }
 
-export default ProductsList
+export default ProductsList 
