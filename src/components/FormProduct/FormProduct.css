@@ -22,14 +22,18 @@
     height: 250px;
     padding: 10px;
 }
-.saveButon{
-    width: 5%;
+.formButton{
+    padding: 10px 20px;
     background-color: gray;
     color: white;
-    height: 50px;
     font-size: 16px;
     border-radius: 30px;
     border: 1px;
+}
+.buttonsContainer{
+    display: flex;
+    align-self: flex-end;
+    gap: 20px;
 }
 @media (min-width: 650px){
     .inputForm {

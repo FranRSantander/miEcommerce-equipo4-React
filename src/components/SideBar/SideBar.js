@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { themeContext } from '../../context/ThemeContext';
 import { Link, NavLink } from 'react-router-dom';
+
 import './SideBar.css';
 import home from '../../assets/home.svg'
 import box from '../../assets/box.svg'
