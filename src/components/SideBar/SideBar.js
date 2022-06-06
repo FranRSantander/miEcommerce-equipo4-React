@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { themeContext } from '../../context/ThemeContext';
 import { Link, NavLink } from 'react-router-dom';
+
 import './SideBar.css';
 import home from '../../assets/home.svg'
 import box from '../../assets/box.svg'
@@ -9,8 +10,8 @@ import user from '../../assets/user.jpg'
 
 function SideBar () {
 
-// A través del context que importe, uso la funcion handleTheme en el onClick del boton del tema
-    const { handleTheme } = useContext(themeContext);
+    // A través del context que importe, uso la funcion handleTheme en el onClick del boton del tema
+    const handleTheme = useContext(themeContext);
 
     return(
         <div className="sideBar">
@@ -24,7 +25,7 @@ function SideBar () {
                         <li className='navItem'><NavLink className='navLink' to='/products'><img className='navLogo' src={box} alt='caja-vector' /><span>Productos</span></NavLink></li>
                         <li className='navItem'><NavLink className='navLink' to='stores'><img className='navLogo' src={store} alt='tienda-vector' /><span>Tiendas</span></NavLink></li>
                     </ul>
-                    <button type='button' className='themeButton'onClick={handleTheme}>Cambiar tema Oscuro/Claro</button>
+                    <button type="button" className="themeButton" onClick={handleTheme}>Cambiar tema Oscuro/Claro</button>
                 </nav>
             </div>
             <figure className="userBlock">

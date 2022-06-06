@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import MainArea from '../components/MainArea/MainArea'
+import MainArea from './MainArea'
 
 describe('MainArea', () => { 
     test('Renderiza el children', ()=>{

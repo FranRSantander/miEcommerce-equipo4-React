@@ -9,10 +9,11 @@ const FormProduct = ({ handleSubmit, product = null}) => {
     const [ values, handleInputChange, setValues ] = useForm({
         title: "",
         price: "",
-        description: ""
+        description: "",
+        image: ""
     })
 
-    //almacena el useNavigate y lo ejecuta junto al metedo POST que se consume mediante prop
+    //almacena el useNavigate y lo ejecuta junto al metodo POST que se consume mediante prop
     const navigate = useNavigate();
     const handleFormSubmit = (e) => {
         e.preventDefault()
@@ -27,6 +28,7 @@ const FormProduct = ({ handleSubmit, product = null}) => {
                 ...product
             })
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [product])
     
   return (
@@ -34,8 +36,9 @@ const FormProduct = ({ handleSubmit, product = null}) => {
         <h3>Información</h3>
         <div className='formBody'>
             <label htmlFor='title'>Nombre</label>
-            <input id='title'
+            <input
                 required
+                id='title'
                 className='inputForm'
                 type='text'
                 name='title'
@@ -44,9 +47,10 @@ const FormProduct = ({ handleSubmit, product = null}) => {
             />
         </div>
         <div className='formBody'>
-            <label>Valor</label>
+            <label htmlFor='price'>Valor</label>
             <input
                 required
+                id='price'
                 className='inputForm'
                 type='text'
                 name='price'
@@ -56,9 +60,9 @@ const FormProduct = ({ handleSubmit, product = null}) => {
         </div>
         <Contador/>
         <div className='formBody'>
-            <label>Descripción</label>
-            <textarea 
-                required
+            <label htmlFor='description'>Descripción</label>
+            <textarea
+                id="description"
                 className='inputForm inputArea' 
                 type='text'
                 name="description"
@@ -68,8 +72,9 @@ const FormProduct = ({ handleSubmit, product = null}) => {
         </div>
         <h3>Galería de imágenes</h3>
         <div className='formBody'>
-            <label>Nueva Imagen</label>
+            <label htmlFor='image'>Nueva Imagen</label>
             <input
+                id="image"
                 className='inputForm'
                 type='text'
                 name='image'
@@ -77,13 +82,12 @@ const FormProduct = ({ handleSubmit, product = null}) => {
                 onChange={handleInputChange}
             />
         </div>
-        <div>
-            <button className='saveButon' type='button' onClick={()=>navigate('/products')}>cancelar</button>
-            <button className='saveButon' type='submit'>Guardar</button>
+        <div className='buttonsContainer'>
+            <button className='formButton' type='button' onClick={()=>navigate('/products')}>Cancelar</button>
+            <button className='formButton' type='submit'>Guardar</button>
         </div>
     </form>
   )
 }
 
 export default FormProduct;
-

@@ -1,8 +1,8 @@
 .sideBar{
-    width: 320px;
+    width: 253px;
     height: 100vh;
     position: absolute;
-    left: -320px;
+    left: -253px;
     background-color: #38343479;
     transition: all;
 }
@@ -24,7 +24,7 @@ body.light .sideBar .active{
 }
 @media (min-width: 1024px){
     .sideBar{
-        position: relative;
+        position: fixed;
         left: 0px;
         display: flex;
         flex-direction: column;

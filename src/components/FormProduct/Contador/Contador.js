@@ -6,9 +6,9 @@ const Contador = () => {
     <>
     <h3>Stock</h3>
       <div className='counterBody'>
-        <button className='counter less'>-</button>
+        <button type="button" className='counter less'>-</button>
         <span >11</span>
-        <button className='counter more'>+</button>
+        <button type="button" className='counter more'>+</button>
       </div>
     </>
   )
