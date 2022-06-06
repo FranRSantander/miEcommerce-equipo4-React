@@ -6,9 +6,6 @@ const Header = (props) => {
 
   return (
     <div className='header'>
-      
-        
-
           <div>
             <img src={menu} alt="menu" />
             {props.title}
@@ -17,9 +14,6 @@ const Header = (props) => {
           <div className="rightSide">
           {props.children}
           </div>
-        
-        
-      
     </div>
   )
 } 
