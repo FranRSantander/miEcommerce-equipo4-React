@@ -16,8 +16,6 @@ const MockFormProduct = () => {
     )
 }
 
-
-
 test("Agarro datos", ()=>{         
 
     render(<MockFormProduct/>)
