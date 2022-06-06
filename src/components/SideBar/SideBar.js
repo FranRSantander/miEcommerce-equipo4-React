@@ -21,9 +21,9 @@ function SideBar () {
                 </figure>
                 <nav className='navSide'>
                     <ul className='navList'>
-                        <li className='navItem'><NavLink className='navLink' to='/'><img className='navLogo' src={home} alt='home-vecto' /><span>Inicio</span></NavLink></li>
-                        <li className='navItem'><NavLink className='navLink' to='/products'><img className='navLogo' src={box} alt='caja-vector' /><span>Productos</span></NavLink></li>
-                        <li className='navItem'><NavLink className='navLink' to='/stores'><img className='navLogo' src={store} alt='tienda-vector' /><span>Tiendas</span></NavLink></li>
+                        <li className='navItem'><NavLink className='navLink' to='/'><img className='navLogo' src={home} alt='home-vecto' />Inicio</NavLink></li>
+                        <li className='navItem'><NavLink className='navLink' to='/products'><img className='navLogo' src={box} alt='caja-vector' />Productos</NavLink></li>
+                        <li className='navItem'><NavLink className='navLink' to='/stores'><img className='navLogo' src={store} alt='tienda-vector' />Tiendas</NavLink></li>
                     </ul>
                     <button type="button" className="themeButton" onClick={handleTheme}>Cambiar tema Oscuro/Claro</button>
                 </nav>
