@@ -1,5 +1,5 @@
 import Tarjeta from "./Tarjeta"
-import { render, screen, fireEvent, waitFor} from "@testing-library/react"
+import { render, screen} from "@testing-library/react"
 import {BrowserRouter, BrowserRouter as Router, Switch, useLocation} from "react-router-dom";
 import {renderHook} from "@testing-library/react-hooks"
 import {useProduct} from "../../pages/Products/ProductsList/ProductsList"

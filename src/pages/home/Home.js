@@ -11,15 +11,13 @@ const Home = () => {
   return (
     <>
         <Header title="¡Hola Olivia!">
-
-
         </Header>
 
         <TarjetaCuerpo>
             <div className='contenedor'>
               <img src = {home} alt="imagen"/>
               <div className='numero'>123</div>
-              <div>Produuctos</div>
+              <div>Productos</div>
             </div>
               <div className='botones'>
                 <Link to='/products' className='linkBoton'><button type='button' className='botonTarjeta'>Ver Listado</button></Link>
