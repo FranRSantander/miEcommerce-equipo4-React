@@ -9,8 +9,3 @@ body.light .mainAreaContent{
     background-color: #efefef;
     color: black;
 }
-@media (min-width: 1024px){
-    .mainAreaContent{
-        margin-left: 253px;
-    }
-}

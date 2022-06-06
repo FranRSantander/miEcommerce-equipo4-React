@@ -1,21 +1,17 @@
 import FormProduct from '../../../components/FormProduct/FormProduct'
-import Header from '../../../components/Header/Header'
-
 import { storeProduct } from '../../../utils/api'
 
 const NewProduct = () => {
 
     const handleSubmit = (data) => {
         storeProduct(data)
+        .then(response => console.log(response))
     }
     
     return (
-        <>
-            <Header title='Productos -> Nuevo producto'/>
-            <FormProduct 
-                handleSubmit={handleSubmit}
-            />
-        </>
+        <FormProduct 
+        handleSubmit={handleSubmit}
+        />
     )
 }
 

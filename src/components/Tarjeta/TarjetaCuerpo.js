@@ -3,7 +3,7 @@ import "./TarjetaCuerpo.css"
 
 const TarjetaCuerpo = ({children}) => {
   return (
-        <div className='tarjeta' data-testid="product-item">
+        <div className='tarjeta'>
             {children}
         </div>
   )

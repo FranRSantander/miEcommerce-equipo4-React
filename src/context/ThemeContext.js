@@ -5,8 +5,8 @@ const { Provider } = themeContext;
 
 const ThemeProvider = ({ children }) => {
     
-    // Funcion principal que maneja el 'onClick' en el componente del SideBar
     const handleTheme = () => {
+
         if(document.body.classList.contains('light')){
             document.body.classList.remove("light");
         }
@@ -15,8 +15,12 @@ const ThemeProvider = ({ children }) => {
         }
     }
 
+    const data = {
+        handleTheme
+    }
+
     return(
-        <Provider value={handleTheme}>
+        <Provider value={data}>
             {children}
         </Provider>
     )

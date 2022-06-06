@@ -14,23 +14,4 @@ const storeProduct = (data) => {
     })
 }
 
-const editProduct = (data, id) => {
-    return fetch(`${url}/${id}`,{
-        method: "PUT",
-        body: JSON.stringify(data),
-        headers:{
-            "Content-Type": "application/json"
-        }
-    })
-}
-const deleteProduct = (id) => {
-    return fetch(`${url}/${id}`, {
-        method: "DELETE"
-    })
-}
-
-const getProduct = (id) => {
-    return fetch(`${url}/${id}`)
-}
-
-export {getProducts, getProduct, editProduct, storeProduct, deleteProduct}
+export {getProducts, storeProduct}
