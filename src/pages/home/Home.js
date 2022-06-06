@@ -12,7 +12,6 @@ const Home = () => {
     <>
         <Header title="¡Hola Olivia!">
 
-
         </Header>
 
         <TarjetaCuerpo>

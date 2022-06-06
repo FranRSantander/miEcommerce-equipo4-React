@@ -7,6 +7,7 @@ import {Link} from "react-router-dom"
 
 const Tarjeta = ({productos, inputValue}) => {
   return (
+<<<<<<< HEAD
         <>
       {(productos.length > 0) ?
           <div className="content">
@@ -39,6 +40,23 @@ const Tarjeta = ({productos, inputValue}) => {
         </>
            
         
+=======
+        <TarjetaCuerpo>
+            <div className='contenedor'>
+                <img src = {imagen} alt="imagen"/>
+                <div className='numero'>{cantidad}</div>
+                <div>{texto}</div>
+            </div>
+            {/* <div className='botones'>
+                <button>Ver Listado</button>
+                <button>Agregar Producto</button>
+            </div> */}
+            <div className='botones'>
+                <button id="idboton" className='botonTarjeta' type='button'>Ver Listado</button>
+                <button className='botonTarjeta' type='button'>Agregar Producto</button>
+            </div>
+        </TarjetaCuerpo>
+>>>>>>> 77cd03cd7a4df9a9044e8c8fb692ff967844e9c1
   )
 }
 

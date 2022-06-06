@@ -1,4 +1,6 @@
 import FormProduct from '../../../components/FormProduct/FormProduct'
+import Header from '../../../components/Header/Header'
+
 import { storeProduct } from '../../../utils/api'
 
 const NewProduct = () => {
@@ -8,9 +10,12 @@ const NewProduct = () => {
     }
     
     return (
-        <FormProduct 
-        handleSubmit={handleSubmit}
-        />
+        <>
+            <Header title='Productos -> Nuevo producto'/>
+            <FormProduct 
+                handleSubmit={handleSubmit}
+            />
+        </>
     )
 }
 

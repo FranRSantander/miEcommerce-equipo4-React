@@ -11,21 +11,16 @@ function App() {
   return(
     <ThemeProvider>
         <BrowserRouter>
-                <div className='bodyContent'>
-                    <SideBar/>
+            <div className='bodyContent'>
+                <SideBar/>
 
-
-                    <MainArea>
-                    
-                        {/* <Header/> */}
-
-                        <Router/>
-
-                    </MainArea>
-                </div>
+                <MainArea>
+                    <Router/>
+                </MainArea>
+            </div>
         </BrowserRouter>
     </ThemeProvider>
-);
+  );
 }
 
 export default App;

@@ -1,12 +1,16 @@
 
 import React, {useState, useEffect} from 'react'
-import Tarjeta from '../../../components/Tarjeta/Tarjeta'
+import{Link} from "react-router-dom"
+
+import TarjetaCuerpo from '../../../components/Tarjeta/TarjetaCuerpo'
 import Header from '../../../components/Header/Header'
+import flecha from "../../../assets/chevron-right.svg"
+
+// import "../../../components/Tarjeta/Tarjeta.css"
 import "./ProductsList.css"
-import "../../../components/Tarjeta/Tarjeta.css"
 import "../../../components/Header/Header.css"
+
 import { getProducts } from '../../../utils/api'
-import { Link } from 'react-router-dom'
 
 
 const ProductsList = () => {
