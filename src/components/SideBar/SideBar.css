@@ -1,13 +1,93 @@
-.sideBar{
+ .sideBar{
     width: 253px;
     height: 100vh;
     position: absolute;
     left: -253px;
-    background-color: #38343479;
-    transition: all;
+    background-color: #383434;
+    transition: all ease 0.8s;
+    z-index: 1;
 }
 .userIcon {
     display: none;
+}
+.logoLink {
+    text-decoration: none;
+  }
+  .logo1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0cb093;
+    letter-spacing: -0.1em;
+  }
+  .logo2 {
+    font-size: 32px;
+    color: #0cb093;
+    letter-spacing: -0.1em;
+    font-weight: 300;
+  }
+.navSide {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.navItem {
+    padding: 5px;
+}
+.navList {
+    list-style: none;
+    padding: 0;
+}
+.navLink {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.navLogo {
+    padding-right: 10px;
+}
+.active {
+    background-color: #ffffff3b;
+    border-radius: 10px;
+}
+.userBlock{
+    background: #ffffff3b;
+    height: 35px;
+    display: flex;
+    border-radius: 30px;
+    width: 80%;
+    align-items: center;
+    
+}
+.userLink{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.userIcon {
+    width: 25px;
+    height: 25px;
+    margin-left: 8px;
+    border-radius: 100%;
+    display: block;
+}
+.userName {
+    font-size: 16px;
+}
+.themeButton{
+    align-self: center;
+    width: 90%;
+    padding: 5px 0 5px 0;
+    border:solid 1px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+}
+body.offSide .sideBar{
+    left: 0px;
 }
 /* Light mode */
 body.light .sideBar{
@@ -30,82 +110,10 @@ body.light .sideBar .active{
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-    }
-    .logoLink {
-        text-decoration: none;
-      }
-      .logo1 {
-        font-size: 32px;
-        font-weight: 800;
-        color: #0cb093;
-        letter-spacing: -0.1em;
-      }
-      .logo2 {
-        font-size: 32px;
-        color: #0cb093;
-        letter-spacing: -0.1em;
-        font-weight: 300;
-      }
-    .navSide {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .navItem {
-        padding: 5px;
-    }
-    .navList {
-        list-style: none;
-        padding: 0;
-    }
-    .navLink {
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-    }
-    .navLogo {
-        padding-right: 10px;
-    }
-    .active {
-        background-color: #ffffff3b;
-        border-radius: 10px;
-    }
-    .userBlock{
-        background: #ffffff3b;
-        height: 35px;
-        display: flex;
-        border-radius: 30px;
-        width: 80%;
-        align-items: center;
-        
-    }
-    .userLink{
-        text-decoration: none;
-        color: white;
-        display: flex;
-        gap: 10px;
-        width: 100%;
-    }
-    .userIcon {
-        width: 25px;
-        height: 25px;
-        margin-left: 8px;
-        border-radius: 100%;
-        display: block;
-    }
-    .userName {
-        font-size: 16px;
-    }
-    .themeButton{
-        align-self: center;
-        width: 90%;
-        padding: 5px 0 5px 0;
-        border:solid 1px rgba(0, 0, 0, 0.06);
-        border-radius: 30px;
+        background-color: #38343479;
+    }                                           
+    body.offSide .sideBar{
+        left: -253px;
     }
     body.light .themeButton{
         background-color: gray;

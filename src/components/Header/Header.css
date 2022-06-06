@@ -38,6 +38,43 @@
   align-items: center;
   font-size: 10px;
 }
+.menuSide {
+  padding: 0;
+  margin-right: 20px;
+  background: gray;
+  border: 0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.menuSpan {
+  display: block;
+  background-color: white;
+  width: 60%;
+  margin: 5px auto;
+  height: 2px;
+  transition: all ease 0.4s;
+
+}
+
+.menuSide.showMenu {
+  position: relative;
+  z-index: 3;
+}
+.menuSide.showMenu .topLine {
+  transform: rotate(140deg);
+  margin: 0px auto;
+}
+.menuSide.showMenu .middleLine {
+  display: none;
+}
+.menuSide.showMenu .botLine {
+  transform: rotate(-140deg);
+  margin: 0px auto;
+}
+
+
 /* Light mode */
 body.light .header{
     background-color: #efefef;
@@ -63,4 +100,9 @@ body.light .header{
         color:white;
         padding: 6px 6px 6px 6px;
     }
+}
+@media (min-width: 1024px){
+  .menuSide {
+    display: none;
+  }
 }

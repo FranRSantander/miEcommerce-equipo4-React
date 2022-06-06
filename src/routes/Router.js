@@ -12,7 +12,6 @@ function Router (){
             <Route path="/products" element={<ProductsList/>}/>
             <Route path="/products/new" element={<NewProduct/>}/>
             <Route path="/products/:id" element={<ProductView/>}/>
-            {/* <Route path="*" element={<NotFound/>}/> */}
         </Routes>
     );
 }
