@@ -31,10 +31,10 @@ const FormProduct = ({ handleSubmit, product = null}) => {
     
   return (
      <form className='formBody' onSubmit={handleFormSubmit}>
-        <h3>Infromación</h3>
+        <h3>Información</h3>
         <div className='formBody'>
-            <label>Nombre</label>
-            <input
+            <label htmlFor='title'>Nombre</label>
+            <input id='title'
                 required
                 className='inputForm'
                 type='text'
