@@ -3,6 +3,8 @@ import Header from '../../../components/Header/Header'
 
 import { storeProduct } from '../../../utils/api'
 
+import '../../../components/Header/BeforeHeader.css'
+
 const NewProduct = () => {
 
     const handleSubmit = (data) => {
@@ -12,9 +14,11 @@ const NewProduct = () => {
     return (
         <>
             <Header title='Productos -> Nuevo producto'/>
-            <FormProduct 
-                handleSubmit={handleSubmit}
-            />
+            <div className='beforeHeaderContainer'>
+                <FormProduct 
+                    handleSubmit={handleSubmit}
+                />
+            </div>
         </>
     )
 }

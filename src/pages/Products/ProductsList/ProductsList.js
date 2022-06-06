@@ -25,12 +25,13 @@ const ProductsList = () => {
   }, [])
 
   return (
-    <div className="productDiv">
+    <>
         {/*Header de Lista de Productos*/}  
       <Header title="Products">
         <input className="inputBuscador" type="text" placeholder="Buscar productos..." onChange={(e)=>{setInputValue(e.target.value)}}/>
         <Link to="/products/new"><input className="botonAgregarProd" type="button" id="boton-agregar" value="Agregar Producto"/></Link>
       </Header>
+    <div className="productDiv">
         {/*Sección del Cuerpo de Lista de Productos*/} 
         {(productos.length > 0) ?
           <div className="content">
@@ -61,6 +62,7 @@ const ProductsList = () => {
           <h1 style={{color:"white"}}>Cargando...</h1>
         }
     </div>
+    </>
   )
 }
 

@@ -1,4 +1,4 @@
-import FormProduct from "../components/FormProduct/FormProduct"
+import FormProduct from "./FormProduct"
 import { render, screen} from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
 import userEvent from "@testing-library/user-event"
@@ -32,7 +32,6 @@ describe('Validaciones sobre los input', () => {
             expect(screen.getByRole('textbox', { name: 'Descripción' }).value).toMatch('Stefan Janoski Negras')
             expect(screen.getByRole('textbox', { name: 'Nueva Imagen' }).value).toMatch('https://cdn.shopify.com/s/files/1/0594/7506/7048/products/650w_slug-833603_012_A_PREM_c1f5a7f9-9fe4-468e-abb6-50d3ebeb202f_566x.jpg?v=1641584350')
         })
-
     })
 
     describe('Inputs vacios', () => {
@@ -71,7 +70,5 @@ describe('Validaciones sobre los input', () => {
             expect(screen.getByDisplayValue('Probando input Descripción')).toBeInTheDocument()
             expect(screen.getByDisplayValue('Probando input Nueva Imagen')).toBeInTheDocument()
         })
-
     })
-
 })

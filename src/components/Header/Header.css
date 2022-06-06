@@ -1,12 +1,16 @@
 .header {
-    background-color: #222222;
+    /* background-color: #222222; */
+    background-color: rgb(30 30 30 / 65%); /*agregue esto*/
+    backdrop-filter: blur(4px); /*agregue esto*/
     font-size: 20px;
     color: white;
     height: 72px;
-    position: relative;
+    /* position: relative; */
+    position: fixed; /*agregue esto*/
     top: 0;
     right: 0;
     left: 0;
+    z-index: 1; /*agregue esto*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +44,7 @@
 }
 /* Light mode */
 body.light .header{
-    background-color: #efefef;
+    background-color: #efefefa6;
     color: black;
   }
   
@@ -62,5 +66,10 @@ body.light .header{
         background-color:rgba(73, 79, 81, 1);
         color:white;
         padding: 6px 6px 6px 6px;
+    }
+}
+@media (min-width: 1024px){
+    .header{
+        left: 253px; /*agregue esto*/
     }
 }

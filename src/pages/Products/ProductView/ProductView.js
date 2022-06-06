@@ -5,6 +5,8 @@ import { editProduct, getProduct, deleteProduct } from '../../../utils/api'
 import Header from '../../../components/Header/Header'
 import FormProduct from '../../../components/FormProduct/FormProduct'
 
+import '../../../components/Header/BeforeHeader.css'
+
 const ProductView = () => {
 
     const [ product,setProduct] = useState({});
@@ -36,10 +38,12 @@ const ProductView = () => {
             <Header title={`Productos -> #${product.id}`}>
                 <button className='formButton' onClick={handleDelete}>Eliminar</button>
             </Header>
-            <FormProduct
-                handleSubmit={handleSubmit}
-                product={product}
-            />
+            <div className='beforeHeaderContainer'>
+                <FormProduct
+                    handleSubmit={handleSubmit}
+                    product={product}
+                />
+            </div>
         </>
     )
 }
