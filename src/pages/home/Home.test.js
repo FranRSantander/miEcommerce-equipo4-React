@@ -25,7 +25,6 @@ describe("Home", ()=>{
     })
     it("debe mostrar dos botones Ver Listado", ()=>{
         const boton = screen.getAllByRole("button", {name:"Ver Listado"})
-        screen.debug()
         expect(boton).toHaveLength(2)
     })
     it("debe mostrar un botón Agregar Producto", ()=>{
