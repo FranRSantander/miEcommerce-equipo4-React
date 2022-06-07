@@ -1,4 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
+
 import './App.css';
 
 import SideBar from './components/SideBar/SideBar';
@@ -8,6 +9,7 @@ import Router from './routes/Router';
 import ThemeProvider from './context/ThemeContext';
 
 function App() {
+
   return(
     <ThemeProvider>
         <BrowserRouter>

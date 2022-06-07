@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { themeContext } from '../../context/ThemeContext';
 import { Link, NavLink } from 'react-router-dom';
+import { onClickOutsideContext } from '../../context/OnClickOutsideContext';
+import useOnClickOutside from '../../hooks/useOnClickOutside';
 
 import './SideBar.css';
 import home from '../../assets/home.svg'
@@ -13,8 +15,16 @@ function SideBar () {
     // A través del context que importe, uso la funcion handleTheme en el onClick del boton del tema
     const handleTheme = useContext(themeContext);
 
+    const { isShown, setIsShown }  = useContext(onClickOutsideContext);
+
+    const modalRef = useOnClickOutside(() => setIsShown(false))
+
     return(
-        <div className="sideBar">
+        <>
+        {
+        isShown
+        &&
+        <div className="sideBar" ref={modalRef}>
             <div className='sideBarContent'>
                 <figure className='logoBlock'>
                     <Link className="logoLink" to='/'><span className='logo1'>Mi</span><span className='logo2'>Ecommerce</span></Link>
@@ -32,6 +42,8 @@ function SideBar () {
                 <Link className="userLink" to='#'><img className='userIcon' src={user} alt='usuario'/><span className='userName'>Olivia</span></Link>
             </figure>
         </div>
+        }
+        </>
     );
 }
 
