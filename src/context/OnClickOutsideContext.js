@@ -5,7 +5,8 @@ const { Provider } = onClickOutsideContext;
 
 const OnClickOutsideProvider = ({ children }) => {
     
-    const [ isShown, setIsShown ] = useState(true)
+    const [ isShown, setIsShown ] = useState(true);
+    console.log(isShown);
 
     return(
         <Provider value={{isShown, setIsShown}}>

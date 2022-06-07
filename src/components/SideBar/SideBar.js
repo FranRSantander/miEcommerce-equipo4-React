@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { themeContext } from '../../context/ThemeContext';
 import { Link, NavLink } from 'react-router-dom';
 import { onClickOutsideContext } from '../../context/OnClickOutsideContext';
@@ -17,7 +17,24 @@ function SideBar () {
 
     const { isShown, setIsShown }  = useContext(onClickOutsideContext);
 
-    const modalRef = useOnClickOutside(() => setIsShown(false))
+    const [ width, setWidth ] = useState(window.innerWidth)
+
+    useEffect(() => {
+        
+        window.addEventListener('resize', () => {
+            setWidth(window.innerWidth)
+        });
+        
+        if(width >= 1024){
+            setIsShown(true)
+        }
+    });
+
+    const modalRef = useOnClickOutside(() => {
+        if(width < 1024 ){
+            setIsShown(false)
+        }
+    })
 
     return(
         <>
