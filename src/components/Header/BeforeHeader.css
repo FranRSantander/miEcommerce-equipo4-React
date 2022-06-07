@@ -1,0 +1,8 @@
+.beforeHeaderContainer{
+    margin-top: 72px;
+}
+/* Light mode */
+body.light .header{
+    background-color: #efefefa6;;
+    color: black;
+}
