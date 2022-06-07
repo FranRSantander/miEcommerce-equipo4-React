@@ -4,7 +4,7 @@ import "./Header.css"
 const Header = (props) => {
 
   const menuSide = document.querySelector('.menuSide')
-  console.log(menuSide)
+  
 
   const handleSideBar = () => {
     document.body.classList.toggle("offSide");
