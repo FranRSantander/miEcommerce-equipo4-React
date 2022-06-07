@@ -14,11 +14,10 @@
     align-items: center;
     padding: 0px 10px;
   }
-  .headerContainer{
+.headerContainer{
     margin-bottom: 72px;
-  }
-
-  .buscador{
+}
+.buscador{
     display:flex;
     align-items: center;
 }
@@ -70,5 +69,8 @@ body.light .header{
 @media (min-width: 1024px){
     .header{
         left: 253px;
+    }
+    .muestraImg{
+        display: none;
     }
 }
