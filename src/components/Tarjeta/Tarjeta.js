@@ -3,11 +3,12 @@ import "./Tarjeta.css"
 import TarjetaCuerpo from './TarjetaCuerpo'
 import flecha from "../../assets/chevron-right.svg"
 import {Link} from "react-router-dom"
+import "../../pages/Products/ProductsList/ProductsList.css"
 
 
 const Tarjeta = ({productos, inputValue}) => {
   return (
-        <>
+        <div className='productDiv'>
       {(productos.length > 0) ?
           <div className="content">
             {productos.filter(element =>{
@@ -36,7 +37,7 @@ const Tarjeta = ({productos, inputValue}) => {
           :
           <h1 style={{color:"white"}}>Cargando...</h1>
         }
-        </>
+        </div>
            
         
   )

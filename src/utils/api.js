@@ -15,7 +15,6 @@ const storeProduct = (data) => {
 }
 
 const editProduct = (data, id) => {
-    console.log(data)
     return fetch(`${url}/${id}`,{
         method: "PUT",
         body: JSON.stringify(data),

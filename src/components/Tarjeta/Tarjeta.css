@@ -17,13 +17,14 @@
     justify-content: space-between;
     left: 5px;
 }
-
 .contenedor{
     display: flex;
     justify-content: space-between;
     gap: 5px;
 }
-
 .numero{
     font-weight: 700;
+}
+.beforeHeaderContainer{
+    margin-top: 80px;
 }

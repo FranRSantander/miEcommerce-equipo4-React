@@ -2,7 +2,6 @@
 import React, {useState, useEffect} from 'react'
 import Tarjeta from '../../../components/Tarjeta/Tarjeta'
 import Header from '../../../components/Header/Header'
-import "./ProductsList.css"
 import "../../../components/Tarjeta/Tarjeta.css"
 import "../../../components/Header/Header.css"
 import { getProducts } from '../../../utils/api'
@@ -32,7 +31,7 @@ const ProductsList = () => {
   const {productos} = useProduct();
  
   return (
-    <div className="productDiv">
+    <>
         {/*Header de Lista de Productos*/}  
       <Header title="Products">
         <input className="inputBuscador" type="text" placeholder="Buscar productos..." onChange={(e)=>{setInputValue(e.target.value)}}/>
@@ -42,7 +41,8 @@ const ProductsList = () => {
         productos={productos}
         inputValue={inputValue}
       />
-    </div>
+    
+    </>
   )
 }
 
