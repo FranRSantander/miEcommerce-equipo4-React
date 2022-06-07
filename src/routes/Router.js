@@ -7,7 +7,6 @@ import ProductView from '../pages/Products/ProductView/ProductView';
 function Router (){
     return(
         <Routes>
-            
             <Route path="/" element={<Home/>}/>
             <Route path="/products" element={<ProductsList/>}/>
             <Route path="/products/new" element={<NewProduct/>}/>

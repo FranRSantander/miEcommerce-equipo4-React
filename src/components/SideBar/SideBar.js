@@ -13,7 +13,9 @@ function SideBar () {
     // A través del context que importe, uso la funcion handleTheme en el onClick del boton del tema
     const handleTheme = useContext(themeContext);
 
+
     return(
+        
         <div className="sideBar">
             <div className='sideBarContent'>
                 <figure className='logoBlock'>
