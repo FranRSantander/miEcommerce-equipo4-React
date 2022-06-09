@@ -43,10 +43,16 @@
   align-items: center;
   font-size: 10px;
 }
+.muestraImg{
+    filter: invert(1);
+}
 /* Light mode */
 body.light .header{
     background-color: #efefefa6;
     color: black;
+}
+body.light .muestraImg{
+    filter: none;
 }
 
 @media (min-width: 425px){
