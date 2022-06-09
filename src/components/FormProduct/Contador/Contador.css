@@ -16,7 +16,9 @@
     color: white;
     font-size: 22px;
 }
-
+body.light .counterBody{
+    color: white;
+}
 @media (min-width: 650px){
     .counterBody {
         width: 12%;

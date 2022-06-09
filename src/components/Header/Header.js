@@ -10,8 +10,7 @@ const Header = (props) => {
 
   return (
     <div className='header'>
-
-        <div>
+        <div className='leftSide'>
             {
                 !isShown
                 ?
@@ -25,7 +24,6 @@ const Header = (props) => {
         <div className="rightSide">
             {props.children}
         </div>
-        
     </div>
   )
 } 

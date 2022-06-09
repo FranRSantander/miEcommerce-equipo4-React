@@ -6,19 +6,22 @@ import MainArea from './components/MainArea/MainArea';
 import Router from './routes/Router';
 
 import ThemeProvider from './context/ThemeContext';
+import OnClickOutsideProvider from './context/OnClickOutsideContext';
 
 function App() {
 
   return(
     <ThemeProvider>
         <BrowserRouter>
-            <div className='bodyContent'>
-                <SideBar/>
+            <OnClickOutsideProvider>
+                <div className='bodyContent'>
+                    <SideBar/>
 
-                <MainArea>
-                    <Router/>
-                </MainArea>
-            </div>
+                    <MainArea>
+                        <Router/>
+                    </MainArea>
+                </div>
+            </OnClickOutsideProvider>
         </BrowserRouter>
     </ThemeProvider>
   );

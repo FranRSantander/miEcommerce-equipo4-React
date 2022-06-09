@@ -33,6 +33,10 @@
 .botonAgregarProd{
     display: none;
 }
+.leftSide{
+    display: flex;
+    gap: 10px;
+}
 .rightSide{
   display:flex;
   gap: 10px;
@@ -47,11 +51,6 @@ body.light .header{
 
 @media (min-width: 425px){
     .inputBuscador{
-        border-radius: 16px;
-        border: solid 1px rgba(73, 79, 81, 1);
-        background: url("../../assets/magnify.svg") no-repeat ;
-        background-position: 95%;
-        padding: 5px;
         width: 160px;
     }
 }

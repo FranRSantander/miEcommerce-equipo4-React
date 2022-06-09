@@ -6,10 +6,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: all ease-in-out 0.75;
+    /* transition: all ease-in-out 0.75; */
     backdrop-filter: blur(4px);
     background-color: #2a282896;
-    z-index: 2;
+    z-index: 3;
 }
 .logoLink{
     text-decoration: none;
@@ -103,14 +103,4 @@ body.light .themeButton{
 }
 body.light .sideBar .active{
     background-color: #00000033;
-}
-@media (min-width: 1024px){
-    .sideBar{
-        position: fixed;
-        left: 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
 }

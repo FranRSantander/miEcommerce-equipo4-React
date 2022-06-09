@@ -5,11 +5,12 @@ const { Provider } = onClickOutsideContext;
 
 const OnClickOutsideProvider = ({ children }) => {
     
-    const [ isShown, setIsShown ] = useState(true);
-    console.log(isShown);
+    const [ isShown, setIsShown ] = useState(false);
+
+    const [ width, setWidth ] = useState(window.innerWidth);
 
     return(
-        <Provider value={{isShown, setIsShown}}>
+        <Provider value={{isShown, setIsShown, width, setWidth}}>
             {children}
         </Provider>
     )
