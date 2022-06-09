@@ -4,6 +4,7 @@ Sobre el proyecto
 
 Proyecto de aplicación ecommerce cuya finalidad es la compra-venta de productos.
 En este Sprint 4, la funcionalidad se focaliza en el Listado, Alta, Baja y Modificación de Productos (CRUD) en React.
+En el Sprint 5 se han implementado tests de componentes.
 
 Consta de las siguientes vistas:
 
@@ -21,6 +22,8 @@ https://trello.com/b/uHOrDC2c/miecommerce
 Tecnologías 
 
 - React.js
+- Jest
+- Testing Library
 
 Dependencias
 
@@ -60,8 +63,11 @@ Llamadas a Api por get para la visualización de productos.
 Sprint III:
 Aplicación de Mobile Design. Manipulación del DOM y agregado de eventos. Validaciones en el Frontend. Agregado de Menú Principal.
 
-Sprint IV (sprint actual):
+Sprint IV:
 Desarrollo de maquetado de interfaz en React. Aplicar Ruteo mediante react-router-dom. Desarrollo de componentes. Mobile first. Uso de hooks para manipulación del estado de componentes. Llamado a la api para realizar operaciones CRUD.
+
+Sprint V:
+Desarrollo de testing de componentes.
 
 Integrantes del grupo:
 

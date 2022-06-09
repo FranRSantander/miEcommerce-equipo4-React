@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { onClickOutsideContext } from '../../context/OnClickOutsideContext'
 
 import "./Header.css"
-import menu from "../../assets/menu.svg"
+import menu from '../../assets/menu.svg'
 
 const Header = (props) => {
 
@@ -10,22 +10,20 @@ const Header = (props) => {
 
   return (
     <div className='header'>
-
-        <div>
-        {
-            !isShown
-            ?
-            <img className='muestraImg' src={menu} alt="menu" onClick={() => setIsShown(x => !x)} />
-            :
-            null
-        }
-        {props.title}
+        <div className='leftSide'>
+            {
+                !isShown
+                ?
+                <img className='muestraImg' src={menu} alt="menu" onClick={() => setIsShown(x => !x)} />
+                :
+                null
+            }
+            {props.title}
         </div>
 
         <div className="rightSide">
-        {props.children}
+            {props.children}
         </div>
-        
     </div>
   )
 } 

@@ -1,13 +1,22 @@
 .mainAreaContent{
     width: 100vw;
-    /*pasar a dark mode*/
     background-color: #222222;
     color: white;
+    padding-left: 20px;
 }
 /* Light mode usando el body */
 body.light .mainAreaContent{
     background-color: #efefef;
     color: black;
+}
+.pantallaInvisible{
+    position: fixed;
+    backdrop-filter: blur(1.2px);
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 2;
 }
 @media (min-width: 1024px){
     .mainAreaContent{

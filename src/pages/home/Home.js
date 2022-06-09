@@ -17,9 +17,9 @@ const Home = () => {
         <div className='beforeHeaderContainer'>
             <TarjetaCuerpo>
                 <div className='contenedor'>
-                <img src = {home} alt="imagen"/>
-                <div className='numero'>123</div>
-                <div>Produuctos</div>
+                    <img src = {home} alt="imagen"/>
+                    <div className='numero'>123</div>
+                    <div>Productos</div>
                 </div>
                 <div className='botones'>
                     <Link to='/products' className='linkBoton'><button type='button' className='botonTarjeta'>Ver Listado</button></Link>
@@ -28,13 +28,13 @@ const Home = () => {
             </TarjetaCuerpo>
             <TarjetaCuerpo>
                 <div className='contenedor'>
-                <img src = {store} alt="imagen"/>
-                <div className='numero'>10</div>
-                <div>Tiendas</div>
+                    <img src = {store} alt="imagen"/>
+                    <div className='numero'>10</div>
+                    <div>Tiendas</div>
                 </div>
                 <div className='botones'>
-                <Link to='#' className='linkBoton'><button type='button' className='botonTarjeta'>Ver Listado</button></Link>
-                <Link to='#' className='linkBoton'><button type='button' className='botonTarjeta'>Agregar Tienda</button></Link>
+                    <Link to='#' className='linkBoton'><button type='button' className='botonTarjeta'>Ver Listado</button></Link>
+                    <Link to='#' className='linkBoton'><button type='button' className='botonTarjeta'>Agregar Tienda</button></Link>
                 </div>
             </TarjetaCuerpo>
         </div>

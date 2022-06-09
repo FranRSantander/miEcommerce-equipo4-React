@@ -1,18 +1,6 @@
 {
   "products": [
     {
-      "title": "Fjallraven",
-      "price": 109.95,
-      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday1",
-      "id": 1,
-      "category": "men's clothing",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "rating": {
-        "rate": 3.9,
-        "count": 120
-      }
-    },
-    {
       "title": "Mens Casual Premium Slim Fit T-Shirts",
       "price": 22.3,
       "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
@@ -68,17 +56,16 @@
       "id": 6
     },
     {
-      "title": "juancarlos",
-      "price": "444459",
-      "description": "a",
-      "image": "",
+      "title": "gabinete de pc",
+      "price": "15000",
+      "description": "gabinete de pc",
       "id": 7
     },
     {
-      "title": "holajuancarlos",
-      "price": "23232",
-      "description": "2323",
-      "image": "",
+      "title": "Samsung A70",
+      "price": "60000",
+      "description": "El Samsung Galaxy A70 completa la serie Galaxy A del 2019. Con una pantalla Full HD+ de 6.7 pulgadas, el Galaxy A70 está potenciado por un procesador octa-core a 2GHz con 6GB de memoria RAM y 128GB de almacenamiento interno. El Galaxy A70 tiene lector de huellas embebido en pantalla, batería de 4500 mAh de carga rápida, puerto USB-C, y corre Android 9.0 Pie.",
+      "image": "https://ar.celulares.com/fotos/samsung-galaxy-a70-81231-g-alt.jpg",
       "id": 8
     }
   ]
