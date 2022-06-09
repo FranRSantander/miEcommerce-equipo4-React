@@ -13,12 +13,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 10px;
-  }
-  .headerContainer{
+}
+.headerContainer{
     margin-bottom: 72px;
-  }
-
-  .buscador{
+}
+.buscador{
     display:flex;
     align-items: center;
 }
@@ -40,13 +39,12 @@
   align-items: center;
   font-size: 10px;
 }
-
 /* Light mode */
 body.light .header{
     background-color: #efefefa6;
     color: black;
-  }
-  
+}
+
 @media (min-width: 425px){
     .inputBuscador{
         border-radius: 16px;
@@ -70,5 +68,8 @@ body.light .header{
 @media (min-width: 1024px){
     .header{
         left: 253px;
+    }
+    .muestraImg{
+        display: none;
     }
 }

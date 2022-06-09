@@ -1,44 +1,45 @@
- .sideBar{
+.sideBar{
     width: 253px;
     height: 100vh;
-    position: absolute;
-    left: -253px;
-    background-color: #38343479;
-    transition: all ease 0.8s;
-    z-index: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all ease-in-out 0.75;
+    backdrop-filter: blur(4px);
+    background-color: #2a282896;
+    z-index: 2;
 }
-.userIcon {
-    display: none;
-}
-.logoLink {
+.logoLink{
     text-decoration: none;
-  }
-  .logo1 {
+}
+.logo1{
     font-size: 32px;
     font-weight: 800;
     color: #0cb093;
     letter-spacing: -0.1em;
-  }
-  .logo2 {
+}
+.logo2{
     font-size: 32px;
     color: #0cb093;
     letter-spacing: -0.1em;
     font-weight: 300;
-  }
-.navSide {
+}
+.navSide{
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.navItem {
+.navItem{
     padding: 5px;
 }
-.navList {
+.navList{
     list-style: none;
     padding: 0;
 }
-.navLink {
+.navLink{
     text-decoration: none;
     color: white;
     font-size: 18px;
@@ -46,10 +47,10 @@
     display: flex;
     align-items: center;
 }
-.navLogo {
+.navLogo{
     padding-right: 10px;
 }
-.active {
+.active{
     background-color: #ffffff3b;
     border-radius: 10px;
 }
@@ -96,6 +97,10 @@ body.light .userBlock{
 body.light .navLink{
     color: black;
 }
+body.light .themeButton{
+    background-color: gray;
+    color: white;
+}
 body.light .sideBar .active{
     background-color: #00000033;
 }
@@ -107,10 +112,5 @@ body.light .sideBar .active{
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        background-color: #38343479;
-    }
-    body.light .themeButton{
-        background-color: gray;
-        color: white;
     }
 }

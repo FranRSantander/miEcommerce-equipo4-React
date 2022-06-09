@@ -59,5 +59,4 @@ test('Creando un nuevo producto', () => {
     const botonGuardar = screen.getByRole('button', { name: 'Guardar' })
     userEvent.click(botonGuardar)
     expect(storeProduct.mock.calls[0][0]).toEqual(product)
-    
 })
